@@ -8,6 +8,8 @@ class Admin::PostsController < ApplicationController
   end
 
   def create
+    p "*"*80
+    p params
     post = Post.new(params[:post])
 
     if post.save
