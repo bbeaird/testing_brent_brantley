@@ -1,0 +1,7 @@
+<%= form_for @post, url: {action: "create"} do |f| %>
+<%= f.text_field :title %>
+<%= f.text_area :content %>
+<%= f.check_box(:is_published) %>
+<%= f.label(:is_published, "Publish that mother-fucking post!") %>
+<%= f.submit "Save" %>
+<% end %>

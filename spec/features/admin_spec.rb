@@ -23,10 +23,17 @@ feature 'Admin panel' do
      end
   end
 
+# 1.9 syntax
+# title: "bloggg", content: "this is a bloggg", is_published: true
+# 1.8 syntax
+# :title => "bloggg", :content => "this is a bloggg", :is_published => true
+
   context "editing post" do
     it "can mark an existing post as unpublished" do
-      pending # remove this line when you're working on implementing this test
-
+      post = Post.create(title: "bloggg", content: "this is a bloggg",is_published: true)
+      visit edit_admin_post_url(post)
+      page.uncheck('post_is_published')
+      click_button "Save"
       page.should have_content "Published: false"
     end
   end

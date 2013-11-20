@@ -1,0 +1,12 @@
+Snippet Tab Trigger Output
+ERB tags  er  <% %>
+print ERB tags  pe  <%= %>
+print ERB comment pc  <%# %>
+if block  if  <% if %>...<% end %>
+if / else block ife <% if %>...<% else %>...<% end %>
+else tag  else  <% else %>
+elsif tag elsif <% elsif %>
+end block end <% end %>
+link_to helper  lt  <%= link_to ..., ... %>
+form_for helper form  <%= form_for(@ ) do |f| %> ... <% end %>
+t() helper  t <%= t('@') %>
